@@ -1,6 +1,9 @@
+# netlify.toml
 [build]
 
-PHP_VERSION=7.2
+command = "php artisan export"
+publish = "dist/"
 
-command = "./vendor/bin/jigsaw build production"
-publish = "build_production"
+[build.environment]
+
+PHP_VERSION = "7.2"
